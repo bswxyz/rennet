@@ -1,0 +1,136 @@
+---
+import '../styles/global.css';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : rawBase + '/';
+
+const title = 'How Rennet was built — Parable build guide';
+const description = 'A build guide for Rennet: the idea, the Astro stack, the SVG aging-cave data viz driven by three rind models, the details that matter, and how to ship it on GitHub Pages.';
+---
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script is:inline>
+  document.documentElement.classList.add('js');
+  try { var t = localStorage.getItem('rennet-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="theme-color" content="#f4ecdb" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="index,follow" />
+<link rel="icon" href={`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12.5' fill='none' stroke='%23d4a53a' stroke-width='2.8'/%3E%3Cpath d='M16 16 L28 11.5 A12.9 12.9 0 0 0 27.2 21.5 Z' fill='%23d4a53a'/%3E%3C/svg%3E`} />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<div class="cellarlight" aria-hidden="true"></div>
+<main class="doc">
+  <a class="doc-back" href={base}>← Back to Rennet</a>
+  <p class="eyebrow mono">[ Parable build guide ]</p>
+  <h1>How Rennet was built</h1>
+  <p class="lede">A farmhouse creamery where the product is mostly time. The signature is an
+    <strong>aging-cave data viz</strong>: an SVG wheel of cheese that matures as you drag a week
+    slider — rind thickening and darkening, a humidity×temperature chart tracking, tasting notes
+    turning over — with three rind models to switch between. Vanilla JS, no chart library.</p>
+
+  <div class="tag-row">
+    <span>Astro 5 · static output</span><span>inline SVG only</span><span>Cormorant / Karla / Space Mono</span><span>light + dark</span><span>reduced-motion aware</span>
+  </div>
+
+  <h2>The idea</h2>
+  <p>Every creamery site says "patience" and shows a photo of a cellar. Rennet <em>demonstrates</em>
+    it: the one thing an affineur actually controls is time × humidity × temperature, so that trio
+    became the interface. You drag the weeks and watch the wheel take on the cave — the same
+    slow transaction the copy describes, made manipulable. The slider is the brand.</p>
+
+  <h2>The stack</h2>
+  <p>Astro 5 with zero client framework — the page ships as static HTML plus one inline vanilla
+    script. Content (cheeses, stockists) lives as arrays in the page frontmatter and renders at
+    build time; the cave gets its three rind models directly in the script. Type is Cormorant
+    (a serif with wheel-stamp elegance), Karla for body, Space&nbsp;Mono for the ledger voice —
+    weeks, millimetres, humidity — that runs through the whole site.</p>
+
+  <h2>Signature technique — the aging cave</h2>
+  <p>The wheel is a cross-section built from three nested rounded rectangles: rind, creamline,
+    core. "Aging" is just insetting the inner rectangles and re-mixing their colours. Each rind
+    style is a small model — functions of the week <code>w</code> — and one snapshot function
+    turns (model, week) into everything the SVG needs:</p>
+  <pre><code>const snapshot = (mk, w) =&gt; &#123;
+  const m = MODELS[mk], f = w / m.weeks;
+  return &#123;
+    rindPx:  m.rindMm(w)  * PX_PER_MM,   // rind thickens with age
+    creamPx: m.creamMm(w) * PX_PER_MM,   // bloomy: creamline advances
+    rc: mix(hexRgb(m.rindCol[0]), hexRgb(m.rindCol[1]), f),  // rind darkens
+    oc: mix(hexRgb(m.coreCol[0]), hexRgb(m.coreCol[1]), f),  // paste deepens
+    mop: m.mottle(w),                    // crust speckle density
+  &#125;;
+&#125;;
+
+// dragging IS the animation — paint directly on input
+slider.addEventListener('input', () =&gt; &#123;
+  week = +slider.value;
+  paintWheel(snapshot(modelKey, week));
+  paintMeta();   // readouts, chart playhead, tasting note
+&#125;);</code></pre>
+  <p>The humidity and temperature curves are the same models plotted: 48 samples of
+    <code>m.rh(w)</code> and <code>m.temp(w)</code> concatenated into two SVG path strings, with a
+    dashed playhead line at the slider's week. Switching rind styles redraws the curves, resets the
+    slider's range (bloomy peaks at 8 weeks, natural runs to 52) and tweens the wheel to its new
+    state over half a second. The mottled crust is a dot pattern masked to the rind ring, so it
+    thickens with the rind for free.</p>
+
+  <h2>Details that matter</h2>
+  <ul>
+    <li><strong>Dragging is the animation.</strong> Slider input paints synchronously — no tween
+      fighting the thumb. The only tween is the model switch, and under
+      <code>prefers-reduced-motion</code> it snaps instead. The idle "cave light" drifting across
+      the wheel is pure CSS and dies in the same media query, so reduced-motion users get a fully
+      working instrument with zero idle movement.</li>
+    <li><strong>Honest without JavaScript.</strong> The static SVG markup carries a real bloomy
+      week-3 state — sensible curves, correct readouts — so the no-JS page shows a truthful
+      chart, not an empty one. All reveal/intro states are gated behind a <code>.js</code> class
+      set synchronously in <code>&lt;head&gt;</code>.</li>
+    <li><strong>The chart talks.</strong> The SVG <code>&lt;title&gt;</code> is rewritten on every
+      change ("rind 4.2 millimetres, cellar at 88% humidity…"), the slider carries
+      <code>aria-valuetext</code> ("week 20 of 52"), and the tasting note is a polite live region.
+      Temperature is dashed as well as coloured, so the two lines survive colour-blindness.</li>
+    <li><strong>Straw needed a chaperone.</strong> The brand straw <code>#d4a53a</code> is only
+      about 1.9:1 against the cream background, so it is reserved for graphics; small text uses a
+      per-theme <code>--accent-text</code> (7:1 on light, 8:1 on dark) and the two chart lines get
+      their own darkened tokens in light mode.</li>
+    <li><strong>Two cellars, one toggle.</strong> Light is the dairy at morning, dark is the aging
+      cellar — same tokens flipped on <code>:root[data-theme]</code>, persisted to
+      <code>localStorage("rennet-theme")</code>, bootstrapped inline before first paint so there is
+      no flash.</li>
+  </ul>
+
+  <div class="callout"><p>The order form is a demo — it validates and confirms in place but sends
+    nothing. Wire it to your own endpoint (Formspree, a serverless function, an email service)
+    before taking real orders. Raw-milk cheese also has real rules — check yours.</p></div>
+
+  <h2>Ship it on GitHub Pages</h2>
+  <p>Astro builds static HTML, so Pages serves it straight from the repo. Two config lines do the
+    work:</p>
+  <pre><code>// astro.config.mjs
+export default defineConfig(&#123;
+  site: 'https://bswxyz.github.io',
+  base: '/rennet',      // project-site path prefix
+  outDir: './docs',     // Pages serves main + /docs
+&#125;);</code></pre>
+  <p>Every internal link goes through <code>import.meta.env.BASE_URL</code> so nothing 404s under
+    the <code>/rennet/</code> prefix, and a <code>.nojekyll</code> in <code>public/</code> keeps
+    Pages from mangling the output. Then:</p>
+  <pre><code>npm run build                      # emits ./docs
+git add -A &amp;&amp; git commit -m "wheel no. 214"
+gh repo create bswxyz/rennet --public --source . --push
+gh api --method POST /repos/bswxyz/rennet/pages \
+  -f 'source[branch]=main' -f 'source[path]=/docs'</code></pre>
+
+  <a class="doc-back" href={base} style="margin-top:2.6rem">← Back to Rennet</a>
+</main>
+</body>
+</html>

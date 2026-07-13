@@ -1,0 +1,57 @@
+---
+// Hero wheel — a raw-milk wheel seen from above, one wedge cut and pulled.
+// All inline SVG; the slow sheen rotation is CSS, gated behind .js and
+// killed under prefers-reduced-motion.
+---
+<svg viewBox="0 0 420 420" role="img" aria-labelledby="wheelArtTitle" focusable="false">
+  <title id="wheelArtTitle">A round farmhouse cheese wheel seen from above, its natural rind stamped with the dairy name, one wedge cut out to show the golden paste inside.</title>
+  <defs>
+    <radialGradient id="wa-rind" cx="42%" cy="36%" r="75%">
+      <stop offset="0%" stop-color="#dcc79b" />
+      <stop offset="62%" stop-color="#c9ab72" />
+      <stop offset="100%" stop-color="#a5824a" />
+    </radialGradient>
+    <radialGradient id="wa-paste" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#f6ecc9" />
+      <stop offset="100%" stop-color="#ecd9a0" />
+    </radialGradient>
+    <pattern id="wa-stipple" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#7a5f36" opacity=".28" />
+      <circle cx="6.5" cy="6" r=".8" fill="#7a5f36" opacity=".2" />
+    </pattern>
+    <path id="wa-stampcircle" d="M210 76 a134 134 0 1 1 -0.01 0" fill="none" />
+  </defs>
+
+  <!-- the wheel -->
+  <g>
+    <circle cx="210" cy="210" r="172" fill="url(#wa-rind)" stroke="#8a6c3e" stroke-width="2.5" />
+    <circle cx="210" cy="210" r="172" fill="url(#wa-stipple)" />
+    <!-- concentric press rings -->
+    <circle cx="210" cy="210" r="150" fill="none" stroke="#8a6c3e" stroke-width="1" opacity=".35" />
+    <circle cx="210" cy="210" r="112" fill="none" stroke="#8a6c3e" stroke-width="1" opacity=".25" />
+    <circle cx="210" cy="210" r="60" fill="none" stroke="#8a6c3e" stroke-width="1" opacity=".2" />
+
+    <!-- the cut: wedge removed between ~ -18° and 38° -->
+    <path d="M210 210 L373.6 156.9 A172 172 0 0 1 345.5 315.9 Z" fill="url(#wa-paste)" stroke="#8a6c3e" stroke-width="2" />
+    <!-- rind band on the two cut faces -->
+    <path d="M210 210 L373.6 156.9" stroke="#c9ab72" stroke-width="7" opacity=".9" />
+    <path d="M210 210 L345.5 315.9" stroke="#c9ab72" stroke-width="7" opacity=".9" />
+    <!-- creamline just under the rind on the curved face -->
+    <path d="M362.5 160.5 A160.5 160.5 0 0 1 336.3 308.9" fill="none" stroke="#e8cf92" stroke-width="8" opacity=".85" />
+    <!-- a few eyes in the paste -->
+    <ellipse cx="300" cy="216" rx="6.5" ry="5" fill="#dfc98c" />
+    <ellipse cx="322" cy="252" rx="4.5" ry="3.6" fill="#dfc98c" />
+    <ellipse cx="273" cy="245" rx="3.5" ry="3" fill="#dfc98c" />
+
+    <!-- slow light across the rind (idle sheen; CSS gated) -->
+    <path class="wheel-sheen" d="M210 210 L210 38 A172 172 0 0 1 330 90 Z" fill="#fff" opacity=".10" aria-hidden="true" />
+
+    <!-- rind stamp, curved -->
+    <text font-family="'Space Mono', monospace" font-size="14.5" letter-spacing="4.5" fill="#6d5327" opacity=".85">
+      <textPath href="#wa-stampcircle" startOffset="38%">RENNET · RAW MILK · TURNED BY HAND</textPath>
+    </text>
+    <!-- centre stamp -->
+    <text x="188" y="206" font-family="'Space Mono', monospace" font-size="12" letter-spacing="2" fill="#6d5327" opacity=".8">RN</text>
+    <text x="172" y="226" font-family="'Space Mono', monospace" font-size="10" letter-spacing="1.5" fill="#6d5327" opacity=".6">MMXXVI</text>
+  </g>
+</svg>

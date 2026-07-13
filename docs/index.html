@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en" data-theme="light"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  document.documentElement.classList.add('js');
+  try { var t = localStorage.getItem('rennet-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script><title>Rennet — raw-milk farmhouse cheese, aged under the byre</title><meta name="description" content="Rennet is a twelve-acre farmhouse creamery: forty-two Ayrshires, raw morning milk, and a sandstone cellar that holds nine degrees all year. Wheels leave when they are ready, not before."><meta name="theme-color" content="#f4ecdb"><meta name="color-scheme" content="light dark"><meta property="og:title" content="Rennet — raw-milk farmhouse cheese, aged under the byre"><meta property="og:description" content="Rennet is a twelve-acre farmhouse creamery: forty-two Ayrshires, raw morning milk, and a sandstone cellar that holds nine degrees all year. Wheels leave when they are ready, not before."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12.5' fill='none' stroke='%23d4a53a' stroke-width='2.8'/%3E%3Cpath d='M16 16 L28 11.5 A12.9 12.9 0 0 0 27.2 21.5 Z' fill='%23d4a53a'/%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/rennet/_astro/guide.DsYyjBCY.css"></head> <body> <div class="cellarlight" aria-hidden="true"></div> <a class="skip" href="#main">Skip to content</a> <header class="nav"> <a class="brand" href="/rennet/" aria-label="Rennet home"> <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"> <circle cx="16" cy="16" r="12.5" fill="none" stroke="currentColor" stroke-width="2.4"></circle> <path d="M16 16 L28 11.5 A12.9 12.9 0 0 0 27.2 21.5 Z" fill="currentColor"></path> </svg> <span class="brand-word">Rennet</span> </a> <nav class="nav-links" aria-label="Primary"> <a href="#cheeses">The cheeses</a> <a href="#cave">The cave</a> <a href="#farm">The farm</a> <a href="/rennet/guide/">Guide</a> <a class="nav-cta" href="#order">Order</a> <button id="themeBtn" class="theme-btn" type="button" aria-pressed="false" aria-label="Switch to dark mode" title="Toggle light / dark"> <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"></circle><g stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"></path></g></svg> <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"></path></svg> </button> </nav> </header> <div class="page"> <main id="main"> <!-- ============ hero — a wheel ============ --> <section class="hero" aria-labelledby="hero-title"> <div class="hero-grid"> <div class="hero-copy"> <p class="eyebrow mono">[ Farmhouse creamery · raw milk · est. 2011 ]</p> <h1 id="hero-title" class="hero-title"> <span class="line"><span>Milk in spring.</span></span> <span class="line"><span>Cheese <em>when</em></span></span> <span class="line"><span>it&rsquo;s ready.</span></span> </h1> <p class="hero-sub">Rennet is twelve acres, forty-two Ayrshires and a sandstone cellar that
+          holds nine degrees whether we like it or not. We make raw-milk wheels the slow way —
+          salt them, turn them, wash them, and wait. Mostly we wait.</p> <div class="hero-actions"> <a class="btn btn-primary" href="#cheeses">See the cheeses</a> <a class="btn btn-ghost" href="#cave">Step into the cave →</a> </div> <dl class="hero-facts"> <div><dt>The herd</dt><dd><span class="c-num" data-to="42">42</span> Ayrshires</dd></div> <div><dt>Cellar humidity</dt><dd><span class="c-num" data-to="94">94</span>%</dd></div> <div><dt>Weeks of waiting</dt><dd>4–52</dd></div> </dl> </div> <figure class="hero-fig"> <svg viewBox="0 0 420 420" role="img" aria-labelledby="wheelArtTitle" focusable="false"> <title id="wheelArtTitle">A round farmhouse cheese wheel seen from above, its natural rind stamped with the dairy name, one wedge cut out to show the golden paste inside.</title> <defs> <radialGradient id="wa-rind" cx="42%" cy="36%" r="75%"> <stop offset="0%" stop-color="#dcc79b"></stop> <stop offset="62%" stop-color="#c9ab72"></stop> <stop offset="100%" stop-color="#a5824a"></stop> </radialGradient> <radialGradient id="wa-paste" cx="50%" cy="40%" r="80%"> <stop offset="0%" stop-color="#f6ecc9"></stop> <stop offset="100%" stop-color="#ecd9a0"></stop> </radialGradient> <pattern id="wa-stipple" width="9" height="9" patternUnits="userSpaceOnUse"> <circle cx="2" cy="2" r="1" fill="#7a5f36" opacity=".28"></circle> <circle cx="6.5" cy="6" r=".8" fill="#7a5f36" opacity=".2"></circle> </pattern> <path id="wa-stampcircle" d="M210 76 a134 134 0 1 1 -0.01 0" fill="none"></path> </defs> <!-- the wheel --> <g> <circle cx="210" cy="210" r="172" fill="url(#wa-rind)" stroke="#8a6c3e" stroke-width="2.5"></circle> <circle cx="210" cy="210" r="172" fill="url(#wa-stipple)"></circle> <!-- concentric press rings --> <circle cx="210" cy="210" r="150" fill="none" stroke="#8a6c3e" stroke-width="1" opacity=".35"></circle> <circle cx="210" cy="210" r="112" fill="none" stroke="#8a6c3e" stroke-width="1" opacity=".25"></circle> <circle cx="210" cy="210" r="60" fill="none" stroke="#8a6c3e" stroke-width="1" opacity=".2"></circle> <!-- the cut: wedge removed between ~ -18° and 38° --> <path d="M210 210 L373.6 156.9 A172 172 0 0 1 345.5 315.9 Z" fill="url(#wa-paste)" stroke="#8a6c3e" stroke-width="2"></path> <!-- rind band on the two cut faces --> <path d="M210 210 L373.6 156.9" stroke="#c9ab72" stroke-width="7" opacity=".9"></path> <path d="M210 210 L345.5 315.9" stroke="#c9ab72" stroke-width="7" opacity=".9"></path> <!-- creamline just under the rind on the curved face --> <path d="M362.5 160.5 A160.5 160.5 0 0 1 336.3 308.9" fill="none" stroke="#e8cf92" stroke-width="8" opacity=".85"></path> <!-- a few eyes in the paste --> <ellipse cx="300" cy="216" rx="6.5" ry="5" fill="#dfc98c"></ellipse> <ellipse cx="322" cy="252" rx="4.5" ry="3.6" fill="#dfc98c"></ellipse> <ellipse cx="273" cy="245" rx="3.5" ry="3" fill="#dfc98c"></ellipse> <!-- slow light across the rind (idle sheen; CSS gated) --> <path class="wheel-sheen" d="M210 210 L210 38 A172 172 0 0 1 330 90 Z" fill="#fff" opacity=".10" aria-hidden="true"></path> <!-- rind stamp, curved --> <text font-family="'Space Mono', monospace" font-size="14.5" letter-spacing="4.5" fill="#6d5327" opacity=".85"> <textPath href="#wa-stampcircle" startOffset="38%">RENNET · RAW MILK · TURNED BY HAND</textPath> </text> <!-- centre stamp --> <text x="188" y="206" font-family="'Space Mono', monospace" font-size="12" letter-spacing="2" fill="#6d5327" opacity=".8">RN</text> <text x="172" y="226" font-family="'Space Mono', monospace" font-size="10" letter-spacing="1.5" fill="#6d5327" opacity=".6">MMXXVI</text> </g> </svg> <figcaption class="hero-cap mono"> <span>WHEEL Nº 214 — cut this morning</span> <span>raw Ayrshire milk · turned Thursday</span> </figcaption> </figure> </div> <p class="hero-scroll mono" aria-hidden="true">scroll — down to the cellar</p> </section> <!-- ============ the cheeses ============ --> <section id="cheeses" class="cheeses"> <span class="wm" aria-hidden="true">AFFINAGE</span> <div class="wrap"> <div class="sec-head"> <p class="kicker mono reveal">[ The cheeses ]</p> <h2 class="reveal">Six wheels, one herd.</h2> <p class="lede reveal">Everything below is raw milk from our own cows, set with traditional
+          rennet, salted by hand and aged under the byre. Weights are approximate, because knives
+          are honest and wheels are not rectangles.</p> </div> <div class="cheese-grid"> <article class="cheese reveal"> <div class="cheese-art"><svg viewBox="0 0 200 120" role="img" aria-label="Illustration of a soft bloomy-rind round with a wedge cut out, the paste bulging at the cut." focusable="false"> <g> <ellipse cx="100" cy="82" rx="62" ry="16" fill="#d8c9a4" opacity=".5"></ellipse> <path d="M40 78 Q40 46 100 46 Q160 46 160 78 Q160 92 100 92 Q40 92 40 78 Z" fill="#f3ead2" stroke="#b8a87e" stroke-width="2"></path> <path d="M46 72 Q60 58 100 56 Q140 58 154 72" fill="none" stroke="#fff" stroke-width="5" opacity=".7" stroke-linecap="round"></path> <path d="M132 50 L168 38 L166 60 Q150 68 134 66 Z" fill="#f6ecc9" stroke="#b8a87e" stroke-width="1.8"></path> <path d="M136 62 Q150 60 163 55" stroke="#e8cf92" stroke-width="4" fill="none" opacity=".9"></path> <circle cx="72" cy="74" r="1.6" fill="#b8a87e" opacity=".5"></circle> <circle cx="118" cy="80" r="1.4" fill="#b8a87e" opacity=".5"></circle> </g>      </svg></div> <div class="cheese-info"> <div class="cheese-top"><h3>Hollow Beck</h3><span class="cheese-price mono">£9.50<span> / 250 g</span></span></div> <p class="cheese-spec mono">4 wks · raw cow · bloomy rind</p> <p class="cheese-note">Mushroom and warm butter under a coat of white. The creamline wins by week five — we sell it at four and let you decide.</p> <span class="cheese-tag mono tag--now">this week’s batch</span> </div> </article><article class="cheese reveal"> <div class="cheese-art"><svg viewBox="0 0 200 120" role="img" aria-label="Illustration of a small round cheese with a glowing orange washed rind." focusable="false">  <g> <ellipse cx="100" cy="84" rx="58" ry="15" fill="#a8683a" opacity=".28"></ellipse> <path d="M48 78 Q48 50 100 50 Q152 50 152 78 Q152 90 100 90 Q48 90 48 78 Z" fill="#cf8a4c" stroke="#8a5227" stroke-width="2"></path> <path d="M54 70 Q72 58 100 57 Q128 58 146 70" fill="none" stroke="#e5a866" stroke-width="4" opacity=".8" stroke-linecap="round"></path> <path d="M60 82 Q100 88 140 82" fill="none" stroke="#8a5227" stroke-width="1.2" opacity=".5"></path> <path d="M78 64 q4 -3 8 0 M112 62 q4 -3 8 0" stroke="#8a5227" stroke-width="1.1" fill="none" opacity=".55"></path> </g>     </svg></div> <div class="cheese-info"> <div class="cheese-top"><h3>Torchbearer</h3><span class="cheese-price mono">£12.00<span> / 250 g</span></span></div> <p class="cheese-spec mono">10 wks · raw cow · washed rind</p> <p class="cheese-note">Washed in cider brine every third day until it glows. Louder in the room than on the tongue — just.</p> <span class="cheese-tag mono tag--few">few wheels left</span> </div> </article><article class="cheese reveal"> <div class="cheese-art"><svg viewBox="0 0 200 120" role="img" aria-label="Illustration of a low tomme-style wheel with a dusty grey rind and one wedge cut." focusable="false">      <g> <ellipse cx="100" cy="86" rx="60" ry="14" fill="#8f7a56" opacity=".3"></ellipse> <path d="M44 76 Q44 52 100 52 Q156 52 156 76 Q156 88 100 88 Q44 88 44 76 Z" fill="#d3c096" stroke="#8f7a56" stroke-width="2"></path> <path d="M50 68 Q74 58 100 57 Q126 58 150 68" fill="none" stroke="#bfa878" stroke-width="3" opacity=".7"></path> <path d="M62 60 l6 4 M96 56 l6 4 M130 60 l6 4" stroke="#8f7a56" stroke-width="1.1" opacity=".5"></path> <path d="M120 54 L152 44 L150 62 Q136 68 122 66 Z" fill="#efe3bc" stroke="#8f7a56" stroke-width="1.8"></path> <circle cx="137" cy="55" r="1.6" fill="#cbb371"></circle> </g> </svg></div> <div class="cheese-info"> <div class="cheese-top"><h3>Haymeadow</h3><span class="cheese-price mono">£8.00<span> / 250 g</span></span></div> <p class="cheese-spec mono">6 wks · raw cow · tomme</p> <p class="cheese-note">The young one. Grass-sweet and springy, rind like a dusty footpath. Our answer to lunch.</p> <span class="cheese-tag mono tag--now">in the shop</span> </div> </article><article class="cheese reveal"> <div class="cheese-art"><svg viewBox="0 0 200 120" role="img" aria-label="Illustration of an ash-coated bloomy round, dark grey beneath a pale bloom, with an ash line through the cut face." focusable="false">     <g> <ellipse cx="100" cy="82" rx="62" ry="16" fill="#8c8676" opacity=".35"></ellipse> <path d="M40 78 Q40 46 100 46 Q160 46 160 78 Q160 92 100 92 Q40 92 40 78 Z" fill="#e6e0d0" stroke="#7a745f" stroke-width="2"></path> <path d="M46 72 Q60 58 100 56 Q140 58 154 72" fill="none" stroke="#fff" stroke-width="4.5" opacity=".65" stroke-linecap="round"></path> <path d="M50 80 Q100 90 150 80" fill="none" stroke="#5c574a" stroke-width="2.4" opacity=".5"></path> <path d="M132 50 L168 38 L166 60 Q150 68 134 66 Z" fill="#f2ead0" stroke="#7a745f" stroke-width="1.8"></path> <path d="M134 58 L165 48" stroke="#4a463c" stroke-width="2.2" opacity=".75"></path> <circle cx="70" cy="66" r="1.4" fill="#5c574a" opacity=".55"></circle> <circle cx="112" cy="76" r="1.5" fill="#5c574a" opacity=".55"></circle> <circle cx="90" cy="84" r="1.2" fill="#5c574a" opacity=".45"></circle> </g>  </svg></div> <div class="cheese-info"> <div class="cheese-top"><h3>Moth &amp; Moon</h3><span class="cheese-price mono">£10.00<span> / 250 g</span></span></div> <p class="cheese-spec mono">5 wks · raw cow · ash-ripened</p> <p class="cheese-note">A line of oak ash under the bloom, like dusk under snow. Quietly the prettiest thing we make.</p> <span class="cheese-tag mono tag--few">few wheels left</span> </div> </article><article class="cheese reveal"> <div class="cheese-art"><svg viewBox="0 0 200 120" role="img" aria-label="Illustration of a tall natural-rind cylinder of cheese stamped with the dairy mark." focusable="false">   <g> <ellipse cx="100" cy="92" rx="56" ry="13" fill="#6f5a3e" opacity=".3"></ellipse> <rect x="52" y="34" width="96" height="60" rx="12" fill="#c0ab83" stroke="#6f5a3e" stroke-width="2"></rect> <ellipse cx="100" cy="36" rx="48" ry="11" fill="#d3c096" stroke="#6f5a3e" stroke-width="2"></ellipse> <path d="M58 52 h84 M58 66 h84 M58 80 h84" stroke="#6f5a3e" stroke-width="1" opacity=".35"></path> <circle cx="72" cy="59" r="1.4" fill="#5c4a32" opacity=".6"></circle> <circle cx="121" cy="73" r="1.6" fill="#5c4a32" opacity=".6"></circle> <circle cx="98" cy="87" r="1.3" fill="#5c4a32" opacity=".6"></circle> <text x="78" y="42" font-family="'Space Mono', monospace" font-size="8" letter-spacing="1.5" fill="#5c4a32" opacity=".75">RN·214</text> </g>    </svg></div> <div class="cheese-info"> <div class="cheese-top"><h3>Whetstone</h3><span class="cheese-price mono">£13.50<span> / 250 g</span></span></div> <p class="cheese-spec mono">9 mo · raw cow · natural rind</p> <p class="cheese-note">Brushed and turned since winter. Broth, hazelnut, and the first crunch of crystals.</p> <span class="cheese-tag mono tag--now">in the shop</span> </div> </article><article class="cheese reveal"> <div class="cheese-art"><svg viewBox="0 0 200 120" role="img" aria-label="Illustration of a clothbound cheddar-style drum, calico bandage sagging slightly at the waist." focusable="false">    <g> <ellipse cx="100" cy="94" rx="58" ry="13" fill="#6f5a3e" opacity=".3"></ellipse> <rect x="48" y="30" width="104" height="66" rx="10" fill="#cbb997" stroke="#6f5a3e" stroke-width="2"></rect> <ellipse cx="100" cy="32" rx="52" ry="11" fill="#dbcba6" stroke="#6f5a3e" stroke-width="2"></ellipse> <path d="M48 46 q52 12 104 0 M48 62 q52 12 104 0 M48 78 q52 12 104 0" stroke="#6f5a3e" stroke-width="1.1" fill="none" opacity=".4"></path> <path d="M64 30 v64 M100 43 v53 M136 30 v64" stroke="#6f5a3e" stroke-width="1" opacity=".25"></path> <path d="M84 26 q16 -8 32 0" stroke="#6f5a3e" stroke-width="1.4" fill="none" opacity=".5"></path> </g>   </svg></div> <div class="cheese-info"> <div class="cheese-top"><h3>Bell &amp; Byre</h3><span class="cheese-price mono">£15.00<span> / 250 g</span></span></div> <p class="cheese-spec mono">14 mo · raw cow · clothbound</p> <p class="cheese-note">Bound in lard and calico, aged through two hay cuts. Deep, savoury, faintly of the cellar itself.</p> <span class="cheese-tag mono tag--wait">next wheels october</span> </div> </article> </div> </div> </section> <!-- ============ the cave — aging viz (signature) ============ --> <section id="cave" class="cave"> <div class="wrap"> <div class="sec-head"> <p class="kicker kicker--rind mono reveal">[ The cave ]</p> <h2 class="reveal">Nine degrees, and patience.</h2> <p class="lede reveal">Under the byre there is a sandstone cellar the temperature of a spring
+          morning, all year round. Every wheel ages down there on oak shelves. Pick a rind, drag the
+          weeks, and watch the cave do the part we can&rsquo;t.</p> </div> <div class="cave-grid"> <div class="cave-stage reveal"> <svg viewBox="0 0 640 300" role="img" aria-labelledby="caveWheelTitle" focusable="false"> <title id="caveWheelTitle">Cross-section of a bloomy-rind wheel at week 3: rind 1.3 millimetres, cellar at 94% humidity and 10.3 degrees.</title> <defs> <pattern id="cwDots" width="7" height="7" patternUnits="userSpaceOnUse"> <circle cx="1.8" cy="1.8" r="1.1" fill="#5a4324"></circle> <circle cx="5.2" cy="4.8" r=".8" fill="#5a4324" opacity=".7"></circle> </pattern> <mask id="rindMask"> <rect x="170" y="90" width="300" height="150" rx="34" fill="#fff"></rect> <rect id="cwMaskInner" x="172.6" y="92.6" width="294.8" height="144.8" rx="31.4" fill="#000"></rect> </mask> </defs> <!-- model name banner --> <text id="cwModelName" class="cw-lbl" x="320" y="34" text-anchor="middle">BLOOMY RIND — PENICILLIUM, GEOTRICHUM</text> <!-- shelf & shadow --> <ellipse cx="320" cy="246" rx="158" ry="8" fill="#17120d" opacity=".14" aria-hidden="true"></ellipse> <rect class="cw-shelf" x="140" y="248" width="360" height="9" rx="3" fill="var(--rind)" opacity=".3"></rect> <rect x="168" y="257" width="10" height="14" fill="var(--rind)" opacity=".22"></rect> <rect x="462" y="257" width="10" height="14" fill="var(--rind)" opacity=".22"></rect> <!-- the wheel, outside in: rind / creamline / core --> <rect id="cwRind" x="170" y="90" width="300" height="150" rx="34" fill="#e8ddbd" stroke="#6b543a" stroke-width="1.5"></rect> <rect id="cwCream" x="172.6" y="92.6" width="294.8" height="144.8" rx="31.4" fill="#eedcaa"></rect> <rect id="cwCore" x="178.9" y="98.9" width="282.2" height="132.2" rx="25.1" fill="#f5ecce"></rect> <!-- a few quiet eyes --> <g aria-hidden="true" opacity=".5"> <ellipse cx="268" cy="152" rx="6" ry="4.6" fill="#d9c186"></ellipse> <ellipse cx="352" cy="188" rx="4.4" ry="3.4" fill="#d9c186"></ellipse> <ellipse cx="318" cy="132" rx="3.4" ry="2.8" fill="#d9c186"></ellipse> <ellipse cx="394" cy="150" rx="3" ry="2.4" fill="#d9c186"></ellipse> </g> <!-- mottled crust, masked to the rind ring --> <rect id="cwMottle" x="170" y="90" width="300" height="150" rx="34" fill="url(#cwDots)" mask="url(#rindMask)" opacity=".1"></rect> <!-- idle cave light (CSS; reduced-motion kills it) --> <ellipse class="cave-breath" cx="320" cy="112" rx="190" ry="52" fill="#ffffff" opacity=".1" aria-hidden="true"></ellipse> <!-- callouts --> <path class="cw-callout" d="M168 140 H104"></path> <text id="cwRindLbl" class="cw-lbl cw-lbl--strong" x="98" y="133" text-anchor="end">rind 1.3 mm</text> <path class="cw-callout" d="M462 178 H542"></path> <text id="cwSideLbl" class="cw-lbl cw-lbl--strong" x="546" y="171">creamline</text> <text class="cw-lbl" x="320" y="286" text-anchor="middle">SANDSTONE CELLAR · SHELF THREE · TURNED EVERY THIRD DAY</text> </svg> <dl class="cave-readout"> <div><dt>Week</dt><dd id="roWeek">wk 3</dd></div> <div><dt>Rind</dt><dd id="roRind">1.3 mm</dd></div> <div><dt>Humidity</dt><dd id="roRH">93.6 %</dd></div> <div><dt>Cellar</dt><dd id="roTemp">10.3 °C</dd></div> </dl> </div> <div class="cave-controls reveal"> <fieldset class="rind-picker"> <legend>Rind style</legend> <div class="rind-opts"> <label class="rind-opt"> <input type="radio" name="rind" value="bloomy" checked> <span><i class="dot" style="background:#f3ead2" aria-hidden="true"></i>Bloomy</span> </label> <label class="rind-opt"> <input type="radio" name="rind" value="washed"> <span><i class="dot" style="background:#c07a42" aria-hidden="true"></i>Washed</span> </label> <label class="rind-opt"> <input type="radio" name="rind" value="natural"> <span><i class="dot" style="background:#8a734f" aria-hidden="true"></i>Natural</span> </label> </div> </fieldset> <div class="age-slider"> <label for="ageWeeks">Time in the cave <output id="ageOut" for="ageWeeks">Week 3 of 8</output></label> <input id="ageWeeks" type="range" min="1" max="8" step="1" value="3" aria-valuetext="week 3 of 8"> <div class="age-ticks" aria-hidden="true"><span>wk 1</span><span id="tickMid">wk 4</span><span id="tickEnd">wk 8</span></div> </div> <div class="cave-chart"> <svg id="caveChart" viewBox="0 0 560 210" role="img" aria-labelledby="caveChartTitle" focusable="false"> <title id="caveChartTitle">Cellar targets across the aging window: humidity and temperature curves, with a marker at the selected week.</title> <g aria-hidden="true"> <path d="M44 58.5 H516 M44 99 H516 M44 139.5 H516" stroke="var(--line-2)" stroke-width="1" fill="none"></path> <path d="M44 180 H516" stroke="var(--line)" stroke-width="1" fill="none"></path> <text class="cw-lbl" x="36" y="22" text-anchor="end">100%</text> <text class="cw-lbl" x="36" y="184" text-anchor="end">78%</text> <text class="cw-lbl" x="524" y="22">14°C</text> <text class="cw-lbl" x="524" y="184">6°C</text> <text class="cw-lbl" x="44" y="202">wk 0</text> <text id="chXEnd" class="cw-lbl" x="516" y="202" text-anchor="end">wk 8</text> </g> <path id="chH" d="M44,58.5 L516,76.9" fill="none" stroke="var(--chart-h)" stroke-width="2.5" stroke-linecap="round"></path> <path id="chT" d="M44,78.8 L516,119.3" fill="none" stroke="var(--chart-t)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 6"></path> <line id="chPlay" x1="221" x2="221" y1="18" y2="180" stroke="var(--ink)" opacity=".45" stroke-dasharray="3 4"></line> <circle id="chDotH" cx="221" cy="65.4" r="4.5" fill="var(--chart-h)" stroke="var(--panel)" stroke-width="1.5"></circle> <circle id="chDotT" cx="221" cy="93.9" r="4.5" fill="var(--chart-t)" stroke="var(--panel)" stroke-width="1.5"></circle> <text id="chPlayLbl" class="cw-lbl cw-lbl--strong" x="221" y="12" text-anchor="middle">wk 3</text> </svg> <div class="chart-legend" aria-hidden="true"> <span><i class="swatch-h"></i>humidity, % RH</span> <span><i class="swatch-t"></i>temperature, °C</span> </div> </div> <div class="tasting"> <p class="t-label mono" id="tastingWk">Tasting — bloomy rind, week 3</p> <p id="tastingNote" aria-live="polite">The bloom has knitted shut. Raw mushroom, warm
+              butter — a thin creamline starting at the rind.</p> </div> <p class="cave-fine mono">Our affinage ledger, plotted — three rind schedules the cellar
+            actually keeps. Drag, switch, taste along.</p> </div> </div> </div> </section> <!-- ============ the farm ============ --> <section id="farm" class="farm"> <div class="wrap farm-grid"> <div class="farm-copy"> <p class="kicker mono reveal">[ The farm ]</p> <h2 class="reveal">The cows write the recipe.</h2> <p class="reveal">Forty-two Ayrshires graze twelve acres of old pasture — ribwort, clover,
+          meadowsweet, a hedge full of blackthorn. In April the milk turns the colour of straw and
+          the spring wheels carry it all summer. By November it&rsquo;s paler, fattier, quieter,
+          and so are we.</p> <p class="reveal">We milk once a day, in the morning, and the milk goes into the vat raw —
+          before it has time to forget the field. Rennet, an hour, a curd knife, and then the long
+          part starts: the cellar holds nine degrees and ninety-four percent humidity without being
+          asked, the way sandstone has for centuries.</p> <p class="reveal">Every wheel is turned every third day and written into the ledger — date,
+          shelf, weight, weather. Nothing leaves early. If a wheel needs another month, it gets
+          another month, and your order waits with it. Nobody has ever complained twice.</p> <p class="farm-sign">— E. Marchbank, herdswoman &amp; affineur</p> </div> <aside class="farm-card reveal" aria-label="Farm facts"> <div class="fc-row"><span class="mono">Founded</span><span>2011</span></div> <div class="fc-row"><span class="mono">The herd</span><span>42 Ayrshires</span></div> <div class="fc-row"><span class="mono">Milk</span><span>raw, morning only</span></div> <div class="fc-row"><span class="mono">Cellar</span><span>9 °C · 94% RH</span></div> <div class="fc-row"><span class="mono">Wheels / yr</span><span>~1,900</span></div> <div class="fc-row"><span class="mono">Turned</span><span>every third day</span></div> <div class="fc-row"><span class="mono">Guarantee</span><span>we eat what we sell</span></div> </aside> </div> </section> <!-- ============ order / stockists ============ --> <section id="order" class="order"> <div class="wrap order-grid"> <div class="order-info"> <p class="kicker mono reveal">[ Order ]</p> <h2 class="reveal">Ask for a wheel.</h2> <p class="order-sub reveal">We cut on Thursdays and post on Fridays, wrapped in waxed paper
+          and yesterday&rsquo;s newspaper. Tell us what you&rsquo;re after and when you need it —
+          if it isn&rsquo;t ready, we&rsquo;ll tell you when it will be.</p> <p class="stock-label reveal">Or find us on a counter</p> <ul class="stockists reveal"> <li><span class="s-name">The Rind Room</span><span class="s-where mono">Ludlow · cut counter</span></li><li><span class="s-name">Corner Dairy</span><span class="s-where mono">Bristol · whole wheels</span></li><li><span class="s-name">Marlow &amp; Danes</span><span class="s-where mono">London E8 · cut counter</span></li><li><span class="s-name">The farm gate</span><span class="s-where mono">Saturdays 9–12 · whatever’s left</span></li> </ul> </div> <div class="order-form reveal" aria-live="polite"> <form id="orderForm" novalidate> <div class="field"> <label for="oName">Name</label> <input id="oName" name="name" type="text" required autocomplete="name" placeholder="Your name"> </div> <div class="field"> <label for="oEmail">Email</label> <input id="oEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com"> </div> <div class="field"> <label for="oCheese">Which cheese?</label> <select id="oCheese" name="cheese"> <option value="Hollow Beck">Hollow Beck — 4 wks · raw cow · bloomy rind</option><option value="Torchbearer">Torchbearer — 10 wks · raw cow · washed rind</option><option value="Haymeadow">Haymeadow — 6 wks · raw cow · tomme</option><option value="Moth &#38; Moon">Moth &amp; Moon — 5 wks · raw cow · ash-ripened</option><option value="Whetstone">Whetstone — 9 mo · raw cow · natural rind</option><option value="Bell &#38; Byre">Bell &amp; Byre — 14 mo · raw cow · clothbound</option> <option value="whole-wheel">A whole wheel — surprise me</option> </select> </div> <div class="field"> <label for="oWhen">When do you need it?</label> <textarea id="oWhen" name="when" rows="3" placeholder="A dinner on the 24th / Christmas / no hurry, whenever it’s ready…"></textarea> </div> <button class="btn btn-primary btn-block" type="submit">Put me on the slate</button> <p class="order-fine mono" id="orderFine">Demo form — no order is sent. See the README.</p> </form> </div> </div> </section> </main> <footer class="footer"> <div class="wrap foot-top"> <span class="foot-brand">Rennet</span> <nav class="foot-links" aria-label="Footer"> <a href="#cheeses">The cheeses</a><a href="#cave">The cave</a><a href="#farm">The farm</a><a href="#order">Order</a><a href="/rennet/guide/">Guide</a> </nav> </div> <div class="wrap foot-bottom mono"> <span>© 2026 Rennet — a design-showcase concept, not a real creamery. The herd, the cellar and every price are fiction.</span> <span>Designed &amp; built by Parable · <a href="/rennet/guide/">How this was built →</a></span> </div> </footer> </div> <script>
+/* ============================================================
+   RENNET — interactions. Progressive enhancement: the page
+   reads fully without JS. Signature: the aging-cave viz —
+   an SVG wheel matures as you drag the weeks; the cellar
+   chart and tasting ledger follow. Vanilla, no libraries.
+   ============================================================ */
+(() => {
+  'use strict';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const root = document.documentElement;
+  const $ = (id) => document.getElementById(id);
+
+  /* ---------- theme toggle ---------- */
+  const themeBtn = $('themeBtn');
+  const syncTheme = () => {
+    const dark = root.dataset.theme === 'dark';
+    if (!themeBtn) return;
+    themeBtn.setAttribute('aria-pressed', String(dark));
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    const m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', dark ? '#17120d' : '#f4ecdb');
+  };
+  syncTheme();
+  if (themeBtn) themeBtn.addEventListener('click', () => {
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('rennet-theme', root.dataset.theme); } catch (e) {}
+    syncTheme();
+  });
+
+  /* ---------- hero intro ---------- */
+  const hero = document.querySelector('.hero');
+  requestAnimationFrame(() => { if (hero) hero.classList.add('loaded'); });
+
+  /* ---------- reveals ---------- */
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    }
+  }, { threshold: 0.14, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  /* ---------- counters ---------- */
+  const cio = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      const el = e.target, to = parseFloat(el.dataset.to);
+      cio.unobserve(el);
+      if (reduce) { el.textContent = String(to); continue; }
+      const dur = 1400, t0 = performance.now();
+      const tick = (t) => {
+        const p = clamp((t - t0) / dur, 0, 1);
+        el.textContent = String(Math.round(to * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.c-num').forEach((el) => {
+    if (!reduce) el.textContent = '0'; /* markup ships final values; zero out only when the count-up will run */
+    cio.observe(el);
+  });
+
+  /* ---------- order demo form ---------- */
+  const form = $('orderForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = $('oName'), email = $('oEmail');
+      if (!name.checkValidity()) { name.reportValidity(); return; }
+      if (!email.checkValidity()) { email.reportValidity(); return; }
+      form.innerHTML =
+        '<div class="order-done"><strong>You&rsquo;re on the slate.</strong>' +
+        '<span class="mono">demo only — nothing was sent. we&rsquo;d normally reply after evening milking.</span></div>';
+    });
+  }
+
+  /* ============================================================
+     The aging cave — three rind models drive an SVG wheel
+     cross-section, the cellar chart, and the tasting ledger.
+     ============================================================ */
+  const wheel = $('cwRind');
+  if (!wheel) return;
+
+  const MODELS = {
+    bloomy: {
+      key: 'bloomy', weeks: 8, start: 3,
+      name: 'BLOOMY RIND — PENICILLIUM, GEOTRICHUM',
+      side: 'creamline',
+      rindMm: (w) => 0.6 + 1.8 * (w / 8),
+      creamMm: (w) => 1 + 8.5 * Math.pow(w / 8, 1.4),
+      rindCol: ['#f3ead2', '#d5c49b'], creamCol: ['#f2e6c0', '#e2c178'],
+      coreCol: ['#f7f0da', '#f2e5bd'],
+      mottle: (w) => 0.05 + 0.1 * (w / 8),
+      rh: (w) => 94.5 - 2.5 * (w / 8),
+      temp: (w) => 11 - 2 * (w / 8),
+      notes: [
+        [1, 'Fresh under its first down of white. Lactic and lemon-bright, the centre chalky as school chalk.'],
+        [3, 'The bloom has knitted shut. Raw mushroom, warm butter — a thin creamline starting at the rind.'],
+        [5, 'The creamline is winning. Cooked cauliflower, cultured cream; give it an hour out of the larder.'],
+        [7, 'Fully broken down, spoonable to the core, one breath of ammonia on the rind. Eat it this week, not next.'],
+      ],
+    },
+    washed: {
+      key: 'washed', weeks: 16, start: 6,
+      name: 'WASHED RIND — CIDER BRINE, EVERY THIRD DAY',
+      side: 'supple layer',
+      rindMm: (w) => 0.8 + 2.6 * (w / 16),
+      creamMm: (w) => 1 + 3.5 * (w / 16),
+      rindCol: ['#e2aa60', '#a8683a'], creamCol: ['#eed7a2', '#dfb977'],
+      coreCol: ['#f6ecd0', '#efdfae'],
+      mottle: (w) => 0.12 + 0.16 * (w / 16),
+      rh: (w) => 92 + 6 * (w / 16),
+      temp: (w) => 12.5 - 1.5 * (w / 16),
+      notes: [
+        [1, 'Pale and shy after the first brine washes. Milky, yeasty, faintly of bread crust.'],
+        [5, 'The rind has turned to apricot. Cider tang and cured-ham savour; the paste starts to give.'],
+        [9, 'Loud in the room, gentle on the tongue. Beef broth, orchard fruit, a proper supple bounce.'],
+        [13, 'For the committed. Farmyard and toasted malt — keep it under a cloche, or lose the fridge.'],
+      ],
+    },
+    natural: {
+      key: 'natural', weeks: 52, start: 20,
+      name: 'NATURAL RIND — BRUSHED, TURNED, LEFT ALONE',
+      side: 'crust',
+      rindMm: (w) => 1 + 9 * (w / 52),
+      creamMm: (w) => 0.8 + 1.2 * (w / 52),
+      rindCol: ['#d9c9a6', '#6f5a3e'], creamCol: ['#e9d9ab', '#d8bd7b'],
+      coreCol: ['#f4ead0', '#e7d190'],
+      mottle: (w) => 0.1 + 0.3 * (w / 52),
+      rh: (w) => 86 - 5 * (w / 52),
+      temp: (w) => 10.5 + 1.8 * Math.sin((w / 52) * Math.PI * 2 - 0.5),
+      notes: [
+        [1, 'Nothing on it but its own crust. Fresh cream and cut hay; the paste springs back.'],
+        [10, 'The rind has taken on the cave — grey-brown, stony, honest. Browned butter and walnut.'],
+        [24, 'Crystals starting to crunch. Broth, toasted hazelnut, the long grassy finish of spring milk.'],
+        [40, 'The keeper. Dense and crystalline, faintly smoky-sweet — a whole year in one wedge.'],
+      ],
+    },
+  };
+
+  const hexRgb = (h) => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
+  const mix = (a, b, f) => a.map((v, i) => v + (b[i] - v) * f);
+  const rgb = (c) => 'rgb(' + c.map((v) => Math.round(v)).join(',') + ')';
+
+  const els = {
+    cream: $('cwCream'), core: $('cwCore'), maskInner: $('cwMaskInner'), mottle: $('cwMottle'),
+    name: $('cwModelName'), rindLbl: $('cwRindLbl'), sideLbl: $('cwSideLbl'), title: $('caveWheelTitle'),
+    roWeek: $('roWeek'), roRind: $('roRind'), roRH: $('roRH'), roTemp: $('roTemp'),
+    chH: $('chH'), chT: $('chT'), chPlay: $('chPlay'),
+    chDotH: $('chDotH'), chDotT: $('chDotT'), chPlayLbl: $('chPlayLbl'), chXEnd: $('chXEnd'),
+    note: $('tastingNote'), noteWk: $('tastingWk'),
+    slider: $('ageWeeks'), out: $('ageOut'), tickMid: $('tickMid'), tickEnd: $('tickEnd'),
+  };
+
+  /* wheel geometry: matches the static SVG markup */
+  const G = { x: 170, y: 90, w: 300, h: 150, rx: 34 };
+  const PX_PER_MM = 2;
+  const inset = (el, t) => {
+    el.setAttribute('x', (G.x + t).toFixed(1));
+    el.setAttribute('y', (G.y + t).toFixed(1));
+    el.setAttribute('width', (G.w - 2 * t).toFixed(1));
+    el.setAttribute('height', (G.h - 2 * t).toFixed(1));
+    el.setAttribute('rx', Math.max(8, G.rx - t).toFixed(1));
+  };
+
+  /* chart geometry: humidity 78–100% left axis, temp 6–14°C right axis */
+  const C = { l: 44, r: 516, t: 18, b: 180 };
+  const xW = (w, max) => C.l + (w / max) * (C.r - C.l);
+  const yH = (v) => C.t + ((100 - v) / 22) * (C.b - C.t);
+  const yT = (v) => C.t + ((14 - v) / 8) * (C.b - C.t);
+
+  let modelKey = 'bloomy';
+  let week = 3;
+
+  const snapshot = (mk, w) => {
+    const m = MODELS[mk], f = w / m.weeks;
+    return {
+      rindPx: m.rindMm(w) * PX_PER_MM,
+      creamPx: m.creamMm(w) * PX_PER_MM,
+      rc: mix(hexRgb(m.rindCol[0]), hexRgb(m.rindCol[1]), f),
+      cc: mix(hexRgb(m.creamCol[0]), hexRgb(m.creamCol[1]), f),
+      oc: mix(hexRgb(m.coreCol[0]), hexRgb(m.coreCol[1]), f),
+      mop: m.mottle(w),
+    };
+  };
+  let cur = snapshot(modelKey, week);
+
+  const paintWheel = (s) => {
+    wheel.setAttribute('fill', rgb(s.rc));
+    inset(els.cream, s.rindPx);
+    inset(els.maskInner, s.rindPx);
+    inset(els.core, s.rindPx + s.creamPx);
+    els.cream.setAttribute('fill', rgb(s.cc));
+    els.core.setAttribute('fill', rgb(s.oc));
+    els.mottle.setAttribute('opacity', s.mop.toFixed(3));
+  };
+
+  const paintMeta = () => {
+    const m = MODELS[modelKey];
+    const rh = m.rh(week), tp = m.temp(week), mm = m.rindMm(week);
+    els.roWeek.textContent = 'wk ' + week;
+    els.roRind.textContent = mm.toFixed(1) + ' mm';
+    els.roRH.textContent = rh.toFixed(1) + ' %';
+    els.roTemp.textContent = tp.toFixed(1) + ' °C';
+    els.rindLbl.textContent = 'rind ' + mm.toFixed(1) + ' mm';
+    els.sideLbl.textContent = m.side;
+    els.name.textContent = m.name;
+    els.out.textContent = 'Week ' + week + ' of ' + m.weeks;
+    els.slider.setAttribute('aria-valuetext', 'week ' + week + ' of ' + m.weeks);
+    const x = xW(week, m.weeks);
+    els.chPlay.setAttribute('x1', x.toFixed(1)); els.chPlay.setAttribute('x2', x.toFixed(1));
+    els.chDotH.setAttribute('cx', x.toFixed(1)); els.chDotH.setAttribute('cy', yH(rh).toFixed(1));
+    els.chDotT.setAttribute('cx', x.toFixed(1)); els.chDotT.setAttribute('cy', yT(tp).toFixed(1));
+    els.chPlayLbl.setAttribute('x', clamp(x, C.l + 16, C.r - 16).toFixed(1));
+    els.chPlayLbl.textContent = 'wk ' + week;
+    let n = m.notes[0];
+    for (const cand of m.notes) if (week >= cand[0]) n = cand;
+    if (els.note.textContent !== n[1]) els.note.textContent = n[1];
+    els.noteWk.textContent = 'Tasting — ' + m.key + ' rind, week ' + week;
+    els.title.textContent = 'Cross-section of a ' + m.key + '-rind wheel at week ' + week +
+      ': rind ' + mm.toFixed(1) + ' millimetres, cellar at ' + rh.toFixed(0) +
+      '% humidity and ' + tp.toFixed(1) + ' degrees.';
+  };
+
+  const drawCurves = () => {
+    const m = MODELS[modelKey], N = 48;
+    let dH = '', dT = '';
+    for (let i = 0; i <= N; i++) {
+      const w = (m.weeks * i) / N;
+      const x = xW(w, m.weeks).toFixed(1);
+      dH += (i ? ' L' : 'M') + x + ',' + yH(m.rh(w)).toFixed(1);
+      dT += (i ? ' L' : 'M') + x + ',' + yT(m.temp(w)).toFixed(1);
+    }
+    els.chH.setAttribute('d', dH);
+    els.chT.setAttribute('d', dT);
+    els.chXEnd.textContent = 'wk ' + m.weeks;
+  };
+
+  /* tween the wheel when the model switches; snap under reduced motion */
+  let raf = 0;
+  const settle = () => {
+    cancelAnimationFrame(raf);
+    const to = snapshot(modelKey, week);
+    if (reduce) { cur = to; paintWheel(cur); return; }
+    const f0 = { rindPx: cur.rindPx, creamPx: cur.creamPx, rc: cur.rc.slice(), cc: cur.cc.slice(), oc: cur.oc.slice(), mop: cur.mop };
+    const t0 = performance.now(), dur = 520;
+    const tick = (t) => {
+      const p = clamp((t - t0) / dur, 0, 1);
+      const e = 1 - Math.pow(1 - p, 3);
+      cur = {
+        rindPx: f0.rindPx + (to.rindPx - f0.rindPx) * e,
+        creamPx: f0.creamPx + (to.creamPx - f0.creamPx) * e,
+        rc: mix(f0.rc, to.rc, e), cc: mix(f0.cc, to.cc, e), oc: mix(f0.oc, to.oc, e),
+        mop: f0.mop + (to.mop - f0.mop) * e,
+      };
+      paintWheel(cur);
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+  };
+
+  /* dragging IS the animation — direct paint, which is also reduced-motion safe */
+  els.slider.addEventListener('input', () => {
+    week = +els.slider.value;
+    cancelAnimationFrame(raf);
+    cur = snapshot(modelKey, week);
+    paintWheel(cur);
+    paintMeta();
+  });
+
+  document.querySelectorAll('input[name="rind"]').forEach((r) => {
+    r.addEventListener('change', () => {
+      if (!r.checked) return;
+      modelKey = r.value;
+      const m = MODELS[modelKey];
+      week = m.start;
+      els.slider.max = String(m.weeks);
+      els.slider.value = String(week);
+      els.tickMid.textContent = 'wk ' + Math.round(m.weeks / 2);
+      els.tickEnd.textContent = 'wk ' + m.weeks;
+      drawCurves();
+      paintMeta();
+      settle();
+    });
+  });
+
+  /* initial paint corrects the static no-JS defaults */
+  drawCurves();
+  paintMeta();
+  paintWheel(cur);
+})();
+</script> </body> </html>
