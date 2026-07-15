@@ -1,10 +1,42 @@
-# Rennet
+<!-- parable:beautified -->
+<div align="center">
+
+<h1>Rennet</h1>
+
+<p><strong>Farmhouse creamery — drag a time slider and watch a wheel's rind mature across a humidity-by-weeks cave chart.</strong></p>
+
+<p>
+  <a href="https://bswxyz.github.io/rennet/"><img alt="Live demo" src="https://img.shields.io/badge/demo-live-8b5cf6?style=flat-square&labelColor=1a1a1a"></a>
+  <img alt="Family" src="https://img.shields.io/badge/family-Parable-ec4899?style=flat-square&labelColor=1a1a1a">
+  <img alt="Stack" src="https://img.shields.io/badge/stack-Astro-f5a623?style=flat-square&labelColor=1a1a1a">
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square&labelColor=1a1a1a"></a>
+</p>
+
+<p>
+  <a href="https://bswxyz.github.io/rennet/"><b>Live demo</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://bswxyz.github.io/rennet/guide/">Build notes</a>
+  &nbsp;·&nbsp;
+  <a href="https://parable-three.vercel.app/templates">More templates</a>
+</p>
+
+<a href="https://bswxyz.github.io/rennet/">
+  <img src=".github/preview.jpg" alt="Rennet — live preview" width="100%">
+</a>
+
+</div>
+
+**Use this template** — copy the source into a new project:
+
+```bash
+npx degit bswxyz/rennet my-app
+```
+
 
 A farmhouse-creamery website template — raw-milk aged cheeses, a herd of forty-two
 Ayrshires, and a sandstone cellar that holds nine degrees all year. Built for
 **Parable**, a curated showcase of individually-crafted website templates.
 
-**Live:** https://bswxyz.github.io/rennet/ · **Build guide:** https://bswxyz.github.io/rennet/guide/
 
 ## The concept
 
